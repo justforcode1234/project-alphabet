@@ -4,7 +4,7 @@ import SideDailyQuest from './SideDailyQuest.vue';
 import StatsBar from './StatsBar.vue';
 import SuperAds from './SuperAds.vue';
 import SideLeague from './SideLeague.vue';
-import Footer from './footer.vue';
+import FooterBar from './FooterBar.vue';
 
 </script>
 
@@ -15,7 +15,7 @@ import Footer from './footer.vue';
     <SideLeague/>
     <SideDailyQuest/>
     <AdBlock/>
-    <Footer/>
+    <FooterBar/>
 </div>
 </template>
 
