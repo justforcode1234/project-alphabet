@@ -1,0 +1,38 @@
+:root{
+    --bg-color:rgb(20, 31, 36);
+    --primary-text-color:white;
+    --primary-active-color:rgb(63, 133, 167);
+    --primary-link-color:rgb(73, 192, 248);
+    --primary-border-color:rgb(55, 70, 79);
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    color:var(--primary-text-color)
+}
+
+a{
+    text-decoration: none;
+    color:var(--primary-link-color)
+}
+
+button{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.card{
+    padding:15px 20px;
+    border:2px solid var(--primary-border-color);
+    border-radius:10px;
+}
