@@ -1,16 +1,20 @@
 :root{
     --bg-color:rgb(20, 31, 36);
     --primary-text-color:white;
+    --secondary-text-color:rgb(82, 101, 109);
     --primary-active-color:rgb(63, 133, 167);
     --primary-link-color:rgb(73, 192, 248);
     --primary-border-color:rgb(55, 70, 79);
+    --duo-green-color:rgb(88, 204, 2);
 }
 
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
-    color:var(--primary-text-color)
+    color:var(--primary-text-color);
+    font-family:din-round,sans-serif;
+    font-weight:bold;
 }
 
 a{
@@ -35,4 +39,19 @@ body{
     padding:15px 20px;
     border:2px solid var(--primary-border-color);
     border-radius:10px;
+}
+
+.flex{
+    display:flex;
+}
+
+.flex-column{
+    display:flex;
+    flex-direction: column;
+}
+
+.bar{
+    height:1px;
+    width:100%;
+    background-color: white;
 }

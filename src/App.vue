@@ -16,13 +16,11 @@ import Sidebar from './components/Sidebar/Sidebar.vue';
 <style>
 .body-container{
     display:grid;
-    grid-template-columns: 250px minmax(700px,800px) 350px;
+    grid-template-columns: 250px minmax(400px,800px) 350px;
 }
 
 .main-container{
     grid-column: 2;
-    height:1200px;
-    overflow: auto;
 }
 
 .side-container{
