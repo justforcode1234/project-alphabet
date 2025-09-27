@@ -8,7 +8,7 @@
     <a href="">DISABLE AD BLOCKER</a>
 </div>
 </template>
-<style>
+<style scoped>
 .adBlock-container{
     display:flex;
     flex-direction: column;

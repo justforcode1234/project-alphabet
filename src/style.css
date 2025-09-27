@@ -12,9 +12,13 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+}
+
+body{
     color:var(--primary-text-color);
     font-family:din-round,sans-serif;
     font-weight:bold;
+    background-color: var(--bg-color);
 }
 
 a{
@@ -29,10 +33,6 @@ button{
 ul{
     list-style: none;
 
-}
-
-body{
-    background-color: var(--bg-color);
 }
 
 .card{
@@ -51,7 +51,7 @@ body{
 }
 
 .bar{
-    height:1px;
+    height:2px;
     width:100%;
     background-color: white;
 }

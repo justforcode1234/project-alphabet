@@ -8,7 +8,7 @@
         <button>Try 2 Weeks FREE</button>
     </div>
 </template>
-<style>
+<style scoped>
 .super-container{
     display:flex;
     flex-direction: column;

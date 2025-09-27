@@ -13,9 +13,13 @@ import ChapterNodes from './ChapterNodes.vue';
     </div>
 </template>
 <style scoped>
+.container{
+    padding:10px 0;
+}
 .header{
     align-items: center;
     gap:10px;
+    padding:30px 0;
 }
 
 .header h3{

@@ -16,7 +16,7 @@ import SideQuest from './SideQuest.vue';
         </ul>
     </div>
 </template>
-<style>
+<style scoped>
 .side-quest-container{
     display:flex;
     flex-direction: column;

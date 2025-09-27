@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  
+Streak box
 </template>
 
 <style scoped>

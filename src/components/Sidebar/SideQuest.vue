@@ -11,7 +11,7 @@
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 
 .quest-container{
     display:flex;

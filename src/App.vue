@@ -1,5 +1,5 @@
 <script setup>
-import MainContent from './components/MainContent/MainContent.vue';
+import HomeView from './pages/HomeView.vue';
 import NavBar from './components/NavBar/NavBar.vue';
 import Sidebar from './components/Sidebar/Sidebar.vue';
 
@@ -8,7 +8,7 @@ import Sidebar from './components/Sidebar/Sidebar.vue';
 <template>
     <div class="body-container">
         <NavBar/>
-        <MainContent/>
+        <HomeView/>
         <Sidebar/>
     </div>
 </template>
@@ -19,7 +19,7 @@ import Sidebar from './components/Sidebar/Sidebar.vue';
     grid-template-columns: 250px minmax(400px,800px) 350px;
 }
 
-.main-container{
+.homePage-wrapper{
     grid-column: 2;
 }
 

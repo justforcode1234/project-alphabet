@@ -1,10 +1,10 @@
 <script setup>
 import AdBlock from './AdBlock.vue';
 import SideDailyQuest from './SideDailyQuest.vue';
-import StatsBar from './StatsBar.vue';
 import SuperAds from './SuperAds.vue';
 import SideLeague from './SideLeague.vue';
 import FooterBar from './FooterBar.vue';
+import StatsBar from './StatsBar/StatsBar.vue';
 
 </script>
 
@@ -19,7 +19,7 @@ import FooterBar from './FooterBar.vue';
 </div>
 </template>
 
-<style>
+<style scoped>
 .side-container{
     display:flex;
     flex-direction: column;

@@ -8,11 +8,11 @@ import logo from "../../assets/images/logo.png"
         <img :src="logo" alt="" class="logo">
     </div>
     <ul class="nav-list">
-        <li class="active"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">Learn</li>
-        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">Learn</li>
-        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">Learn</li>
-        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">Learn</li>
-        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">Learn</li>
+        <li class="active"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">LEARN</li>
+        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/80a60f598d6a6b0493aeb4d7b93fc0e3.svg" alt="">CHARACTERS</li>
+        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/5187f6694476a769d4a4e28149867e3e.svg" alt="">PRACTICE</li>
+        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/ca9178510134b4b0893dbac30b6670aa.svg" alt="">LEADERBOARD</li>
+        <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/7159c0b5d4250a5aea4f396d53f17f0c.svg" alt="">MORE</li>
     </ul>
 </div>
 </template>
@@ -50,10 +50,12 @@ import logo from "../../assets/images/logo.png"
 .nav-list li{
     display:flex;
     align-items: center;
-    gap:10px;
+    gap:20px;
     padding:10px;
     cursor: pointer;
     border-radius: 10px;
+    font-size:13px;
+    font-weight: 800;
 }
 
 .nav-list li.active{
@@ -67,6 +69,10 @@ import logo from "../../assets/images/logo.png"
 
 .nav-list li.active:hover{
     background-color: transparent;
+}
+
+.nav-list li img{
+    max-width:35px;
 }
 
 </style>

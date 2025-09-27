@@ -1,0 +1,67 @@
+[
+  { "id": 1, "japanese": "あ", "english": "a" },
+  { "id": 2, "japanese": "い", "english": "i" },
+  { "id": 3, "japanese": "う", "english": "u" },
+  { "id": 4, "japanese": "え", "english": "e" },
+  { "id": 5, "japanese": "お", "english": "o" },
+
+  { "id": 6, "japanese": "か", "english": "ka" },
+  { "id": 7, "japanese": "き", "english": "ki" },
+  { "id": 8, "japanese": "く", "english": "ku" },
+  { "id": 9, "japanese": "け", "english": "ke" },
+  { "id": 10, "japanese": "こ", "english": "ko" },
+
+  { "id": 11, "japanese": "さ", "english": "sa" },
+  { "id": 12, "japanese": "し", "english": "shi" },
+  { "id": 13, "japanese": "す", "english": "su" },
+  { "id": 14, "japanese": "せ", "english": "se" },
+  { "id": 15, "japanese": "そ", "english": "so" },
+
+  { "id": 16, "japanese": "た", "english": "ta" },
+  { "id": 17, "japanese": "ち", "english": "chi" },
+  { "id": 18, "japanese": "つ", "english": "tsu" },
+  { "id": 19, "japanese": "て", "english": "te" },
+  { "id": 20, "japanese": "と", "english": "to" },
+
+  { "id": 21, "japanese": "な", "english": "na" },
+  { "id": 22, "japanese": "に", "english": "ni" },
+  { "id": 23, "japanese": "ぬ", "english": "nu" },
+  { "id": 24, "japanese": "ね", "english": "ne" },
+  { "id": 25, "japanese": "の", "english": "no" },
+
+  { "id": 26, "japanese": "は", "english": "ha" },
+  { "id": 27, "japanese": "ひ", "english": "hi" },
+  { "id": 28, "japanese": "ふ", "english": "fu" },
+  { "id": 29, "japanese": "へ", "english": "he" },
+  { "id": 30, "japanese": "ほ", "english": "ho" },
+
+  { "id": 31, "japanese": "ま", "english": "ma" },
+  { "id": 32, "japanese": "み", "english": "mi" },
+  { "id": 33, "japanese": "む", "english": "mu" },
+  { "id": 34, "japanese": "め", "english": "me" },
+  { "id": 35, "japanese": "も", "english": "mo" },
+
+  { "id": 36, "japanese": "や", "english": "ya" },
+  { },
+  { "id": 37, "japanese": "ゆ", "english": "yu" },
+  { },
+  { "id": 38, "japanese": "よ", "english": "yo" },
+
+  { "id": 39, "japanese": "ら", "english": "ra" },
+  { "id": 40, "japanese": "り", "english": "ri" },
+  { "id": 41, "japanese": "る", "english": "ru" },
+  { "id": 42, "japanese": "れ", "english": "re" },
+  { "id": 43, "japanese": "ろ", "english": "ro" },
+
+  { "id": 44, "japanese": "わ", "english": "wa" },
+  { },
+  { },
+  { },
+  { "id": 45, "japanese": "を", "english": "wo" },
+
+  { "id": 46, "japanese": "ん", "english": "n" },
+  { },
+  { },
+  { },
+  { }
+]
