@@ -2,11 +2,15 @@
 import { computed } from 'vue';
 import CharactersPage from './CharactersView.vue';
 import LearnPage from './LearnView.vue';
+import PracticeView from './PracticeView.vue';
+import CharacterPracticeView from './CharacterPracticeView.vue';
 
-const page='characters'
+const page='characterPractice'
 const pageMap={
     learn:LearnPage,
     characters:CharactersPage,
+    practice:PracticeView,
+    characterPractice:CharacterPracticeView,
 }
 
 const currentPage=computed(()=>pageMap[page] || null)

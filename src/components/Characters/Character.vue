@@ -1,20 +1,27 @@
 <script setup>
-import {ref} from "vue"
+import {ref,inject} from "vue"
+import useDragging from "../../utils/useDragging"
+
 const props=defineProps({
-    character:{
-        required:true
-    }
+    character:{required:true},
 })
 
+const selectedCharactersList=inject('selectedCharactersList')
+const emit = defineEmits(['selectedCharacter'])
 const buttonPressed=ref(false)
+const {isDragging}=useDragging()
+
+
 
 const clickHandler=()=>{
     console.log('clicked')
+    console.log(selectedCharactersList.value)
 }
+
 </script>
 
 <template>
-    <div @mousedown="buttonPressed=true" @mouseup="buttonPressed=false" @click="clickHandler" class="character-wrapper flex-column box" :class="{'empty-box':!character.id,'clicked':buttonPressed}">
+    <div @pointerdown="buttonPressed=true" @pointerup="buttonPressed=false" @pointerenter="isDragging && emit('selectedCharacter',character)" @click="clickHandler" class="character-wrapper flex-column unselectable" :class="{'empty-box':!character.id,'clicked':buttonPressed,'selected':selectedCharactersList.includes(character)}">
         <div>{{ character.japanese }}</div>
         <div>{{ character.english }}</div>
         <div v-if="character.id"><div :class="{'progress-bar':character.id}"></div></div>
@@ -53,5 +60,10 @@ const clickHandler=()=>{
 
 .character-wrapper.clicked{
  box-shadow: none
+}
+
+.selected{
+    background-color: yellow;
+    color:black;
 }
 </style>
