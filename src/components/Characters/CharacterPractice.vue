@@ -1,11 +1,13 @@
 <script setup>
-import { ref,watch,inject } from 'vue';
+import { ref,watch,inject, computed } from 'vue';
 let characters=inject('selectedCharactersList')
 characters.value.sort(() => Math.random() - 0.5);
 
 let isStarted=inject('isStarted')
-const inputCharacter=ref('')
+let inputCharacter=ref('')
 let displayCharacter=ref('')
+let arrayLength=characters.value.length
+let incorrectCharacters=ref([])
 
 const handleClick=()=>{
     isStarted.value=!isStarted
@@ -13,11 +15,24 @@ const handleClick=()=>{
 
 watch(inputCharacter,(currentValue)=>{
     if(currentValue==='') return
-    if(characters.value.length && currentValue===characters.value[0].english){
-        displayCharacter.value=characters.value[0].japanese
-        characters.value.splice(0,1)
+    if(currentValue.length===characters.value[0].english.length){
+        if(characters.value.length && currentValue===characters.value[0].english){
+            displayCharacter.value=characters.value[0].japanese
+            characters.value.splice(0,1)
+        }
+        else{
+            !incorrectCharacters.value.includes(characters.value[0]) && incorrectCharacters.value.push(characters.value[0])
+        }
         inputCharacter.value=''
     }
+})
+
+const accuracy = computed(() => {
+  const totalAnswered = arrayLength - characters.value.length
+  if (totalAnswered === 0) return 0
+
+  const correctCount = totalAnswered - incorrectCharacters.value.length
+  return Math.round((correctCount / totalAnswered) * 100)
 })
 
 </script>
@@ -31,7 +46,7 @@ watch(inputCharacter,(currentValue)=>{
             <div class="practiceScore-container flex">
                 <div class="subScore-container">
                     <span class="score-title">Accuracy</span>
-                    <span>0%</span>
+                    <span>{{ accuracy }}</span>
                 </div>
                 <div class="subScore-container" style="border-right: 1px solid var(--primary-active-color);border-left:1px solid var(--primary-active-color);">
                     <span class="score-title">Remaining</span>
@@ -39,11 +54,14 @@ watch(inputCharacter,(currentValue)=>{
                 </div>
                 <div class="subScore-container">
                     <span class="score-title">Incorrect</span>
-                    <span>0/1</span>
+                    <span>{{`${incorrectCharacters.length}/${arrayLength}`}}</span>
                 </div>
             </div>
             <input type="text" placeholder="Type Phonetic English" v-model="inputCharacter">
             <button @click="handleClick"> Reveal Answer</button>
+        </div>
+        <div class="wrongCharacter-container flex-column">
+            {{ incorrectCharacters }}
         </div>
     </div>
 </template>
