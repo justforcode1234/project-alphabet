@@ -14,14 +14,12 @@ const {isDragging}=useDragging()
 
 
 const clickHandler=()=>{
-    console.log('clicked')
-    console.log(selectedCharactersList.value)
 }
 
 </script>
 
 <template>
-    <div @pointerdown="buttonPressed=true" @pointerup="buttonPressed=false" @pointerenter="isDragging && emit('selectedCharacter',character)" @click="clickHandler" class="character-wrapper flex-column unselectable" :class="{'empty-box':!character.id,'clicked':buttonPressed,'selected':selectedCharactersList.includes(character)}">
+    <div @pointerdown="buttonPressed=true" @pointerup="buttonPressed=false" @pointerenter="isDragging && character.id && emit('selectedCharacter',character)" @click="clickHandler" class="character-wrapper flex-column unselectable" :class="{'empty-box':!character.id,'clicked':buttonPressed,'selected':selectedCharactersList.includes(character)}">
         <div>{{ character.japanese }}</div>
         <div>{{ character.english }}</div>
         <div v-if="character.id"><div :class="{'progress-bar':character.id}"></div></div>

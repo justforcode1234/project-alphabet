@@ -1,8 +1,8 @@
 <script setup>
 import Character from './Character.vue';
-import {ref,provide} from 'vue'
+import {ref,inject} from 'vue'
 
-let selectedCharactersList=ref([])
+let selectedCharactersList=inject('selectedCharactersList')
 
 const props=defineProps({
     characters:{
@@ -10,10 +10,14 @@ const props=defineProps({
     }
 })
 
-provide('selectedCharactersList',selectedCharactersList)
 const handleSelectedCharacter=(character)=>{
     const index = selectedCharactersList.value.findIndex(c => c.id === character.id)
-    console.log(selectedCharactersList.value.findIndex(c => c.id === character.id))
+    if (index === -1) {
+        selectedCharactersList.value.push(character)
+    } 
+    else {
+        selectedCharactersList.value.splice(index, 1)
+  }
 }
 
 </script>

@@ -1,21 +1,25 @@
 <script setup>
+import CharacterPractice from '../components/Characters/CharacterPractice.vue'
 import CharactersList from '../components/Characters/CharactersList.vue'
 import hiragana from '../hiragana.json'
-// let practiceCharacters=[]
-// let tempCharacters=[]
-// for (let i = 1; i <= hiragana.length; i++) {
-//     tempCharacters.push(hiragana[i-1])
-//     if(i%5==0){
-//         practiceCharacters.push(tempCharacters)
-//         tempCharacters=[]
-//     }  
-// }
+import {ref,provide} from 'vue'
+
+let selectedCharactersList=ref([])
+
+let isStarted=ref(false)
+provide('selectedCharactersList',selectedCharactersList)
+provide('isStarted',isStarted)
+
+const handleClick=()=>{
+    isStarted.value=!isStarted.value
+}
 </script>
 
 <template>
     <div class="characterPractice-wrapper">
-        <CharactersList :characters="hiragana"/>
-        <button class="start-button unselectable">Start</button>
+        <CharactersList v-if="!isStarted" :characters="hiragana"/>
+        <CharacterPractice v-else/>
+        <button v-show="!isStarted" @click="handleClick" class="start-button unselectable">Start</button>
     </div>
 </template>
 
@@ -33,4 +37,5 @@ import hiragana from '../hiragana.json'
     width:60px;
     border-radius: 15px;
 }
+
 </style>
