@@ -4,12 +4,13 @@ import useDragging from "../../utils/useDragging"
 
 const props=defineProps({
     character:{required:true},
+    selectMode:{default:false}
 })
 
-const selectedCharactersList=inject('selectedCharactersList')
+const selectedCharactersList=props.selectMode?inject('selectedCharactersList'):[]
 const emit = defineEmits(['selectedCharacter'])
 const buttonPressed=ref(false)
-const {isDragging}=useDragging()
+const {isDragging}=props.selectMode? useDragging():false
 
 
 

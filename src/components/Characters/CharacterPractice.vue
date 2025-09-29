@@ -1,12 +1,12 @@
 <script setup>
 import { ref,watch,inject, computed } from 'vue';
 let characters=inject('selectedCharactersList')
-characters.value.sort(() => Math.random() - 0.5);
+let shuffleCharacters=ref(characters.value.slice().sort(() => Math.random() - 0.5))
 
 let isStarted=inject('isStarted')
 let inputCharacter=ref('')
 let displayCharacter=ref('')
-let arrayLength=characters.value.length
+let arrayLength=shuffleCharacters.value.length
 let incorrectCharacters=ref([])
 
 const handleClick=()=>{
@@ -15,20 +15,29 @@ const handleClick=()=>{
 
 watch(inputCharacter,(currentValue)=>{
     if(currentValue==='') return
-    if(currentValue.length===characters.value[0].english.length){
-        if(characters.value.length && currentValue===characters.value[0].english){
-            displayCharacter.value=characters.value[0].japanese
-            characters.value.splice(0,1)
+    if(currentValue.length===shuffleCharacters.value[0].english.length){
+        if(shuffleCharacters.value.length && currentValue===shuffleCharacters.value[0].english){
+            displayCharacter.value=shuffleCharacters.value[0].japanese
+            shuffleCharacters.value.splice(0,1)
         }
         else{
-            !incorrectCharacters.value.includes(characters.value[0]) && incorrectCharacters.value.push(characters.value[0])
+            !incorrectCharacters.value.includes(shuffleCharacters.value[0]) && incorrectCharacters.value.push(shuffleCharacters.value[0])
         }
         inputCharacter.value=''
     }
 })
 
+watch(()=>shuffleCharacters.value.length,(newLength)=>{
+    if(newLength===0){
+        shuffleCharacters.value=characters.value.slice().sort(() => Math.random() - 0.5)
+        displayCharacter.value=shuffleCharacters.value[0].japanese
+        incorrectCharacters.value=[]
+    }
+})
+
+
 const accuracy = computed(() => {
-  const totalAnswered = arrayLength - characters.value.length
+  const totalAnswered = arrayLength - shuffleCharacters.value.length
   if (totalAnswered === 0) return 0
 
   const correctCount = totalAnswered - incorrectCharacters.value.length
@@ -40,7 +49,7 @@ const accuracy = computed(() => {
 <template>
     <div class="characterPractice-wrapper flex-column">
         <div class="practiceDisplay-container flex">
-            {{ characters.length? characters[0].japanese : displayCharacter}}
+            {{ shuffleCharacters.length? shuffleCharacters[0].japanese : displayCharacter}}
         </div>
         <div class="practiceFooter-container flex">
             <div class="practiceScore-container flex">
@@ -50,7 +59,7 @@ const accuracy = computed(() => {
                 </div>
                 <div class="subScore-container" style="border-right: 1px solid var(--primary-active-color);border-left:1px solid var(--primary-active-color);">
                     <span class="score-title">Remaining</span>
-                    <span>{{ characters.length }}</span>
+                    <span>{{ shuffleCharacters.length }}</span>
                 </div>
                 <div class="subScore-container">
                     <span class="score-title">Incorrect</span>

@@ -15,7 +15,7 @@ const props=defineProps({
     </div>
     <div v-else class="charactersContent-wrapper flex-column">
         <CharactersLearnBanner :banner="props.alphabet.banner" />
-        <CharactersList :characters="props.alphabet.characters" />
+        <CharactersList :characters="props.alphabet.characters" :select-mode="false" />
         <div class="bar"></div>
     </div>
 </template>

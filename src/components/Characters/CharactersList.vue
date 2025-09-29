@@ -2,13 +2,16 @@
 import Character from './Character.vue';
 import {ref,inject} from 'vue'
 
-let selectedCharactersList=inject('selectedCharactersList')
-
 const props=defineProps({
     characters:{
         required:true
+    },
+    selectMode:{
+        default:false
     }
 })
+
+const selectedCharactersList=props.selectMode?inject('selectedCharactersList'):[]
 
 const handleSelectedCharacter=(character)=>{
     const index = selectedCharactersList.value.findIndex(c => c.id === character.id)
@@ -24,7 +27,7 @@ const handleSelectedCharacter=(character)=>{
 
 <template>
     <div class="characterList-wrapper">
-        <Character v-for="character in characters" :key="character.id" :character="character" @selectedCharacter="handleSelectedCharacter"/>
+        <Character v-for="character in characters" :key="character.id" :character="character" @selectedCharacter="handleSelectedCharacter" :selectMode="props.selectMode"/>
     </div>
 </template>
 

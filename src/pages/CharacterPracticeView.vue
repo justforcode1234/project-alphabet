@@ -17,7 +17,7 @@ const handleClick=()=>{
 
 <template>
     <div class="characterPractice-wrapper">
-        <CharactersList v-if="!isStarted" :characters="hiragana"/>
+        <CharactersList v-if="!isStarted" :characters="hiragana" :select-mode="true"/>
         <CharacterPractice v-else/>
         <button v-show="!isStarted" @click="handleClick" class="start-button unselectable">Start</button>
     </div>
