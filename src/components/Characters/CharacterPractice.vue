@@ -67,7 +67,7 @@ const accuracy = computed(() => {
                 </div>
             </div>
             <input type="text" placeholder="Type Phonetic English" v-model="inputCharacter">
-            <button @click="handleClick"> Reveal Answer</button>
+            <button @click="handleClick"> Back</button>
         </div>
         <div class="wrongCharacter-container flex-column">
             {{ incorrectCharacters }}
