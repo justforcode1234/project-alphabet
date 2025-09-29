@@ -2,6 +2,7 @@
 import CharacterPractice from '../components/Characters/CharacterPractice.vue'
 import CharactersList from '../components/Characters/CharactersList.vue'
 import hiragana from '../hiragana.json'
+
 import {ref,provide} from 'vue'
 
 let selectedCharactersList=ref([])

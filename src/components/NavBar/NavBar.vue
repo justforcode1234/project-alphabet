@@ -1,5 +1,11 @@
 <script setup>
 import logo from "../../assets/images/logo.png"
+import { useRoute } from "vue-router";
+
+const isActiveLink=(routePath)=>{
+    const route=useRoute();
+    return route.path===routePath;
+}
 </script>
 
 <template>
@@ -10,23 +16,23 @@ import logo from "../../assets/images/logo.png"
     <ul class="nav-list">
 
         <router-link to="/learn">
-            <li class="active"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">LEARN</li>
+            <li :class="{'active':isActiveLink('/learn')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">LEARN</li>
         </router-link>
 
         <router-link to="/characters">
-            <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/80a60f598d6a6b0493aeb4d7b93fc0e3.svg" alt="">CHARACTERS</li>
+            <li :class="{'active':isActiveLink('/characters')}" ><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/80a60f598d6a6b0493aeb4d7b93fc0e3.svg" alt="">CHARACTERS</li>
         </router-link>
 
         <router-link to="/practice">
-            <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/5187f6694476a769d4a4e28149867e3e.svg" alt="">PRACTICE</li>
+            <li :class="{'active':isActiveLink('/practice')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/5187f6694476a769d4a4e28149867e3e.svg" alt="">PRACTICE</li>
         </router-link>
 
-        <router-link to="/learn">
-            <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/ca9178510134b4b0893dbac30b6670aa.svg" alt="">LEADERBOARD</li>
+        <router-link to="/">
+            <li :class="{'active':isActiveLink('/404')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/ca9178510134b4b0893dbac30b6670aa.svg" alt="">LEADERBOARD</li>
         </router-link>
 
-        <router-link to="/learn">
-            <li><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/7159c0b5d4250a5aea4f396d53f17f0c.svg" alt="">MORE</li>
+        <router-link to="/">
+            <li :class="{'active':isActiveLink('/404')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/7159c0b5d4250a5aea4f396d53f17f0c.svg" alt="">MORE</li>
         </router-link>
     </ul>
 </div>
