@@ -11,7 +11,10 @@ const isActiveLink=(routePath)=>{
 <template>
 <div class="nav-container">
     <div class="logo-container">
-        <img :src="logo" alt="" class="logo">
+        <router-link to="/">
+             <img :src="logo" alt="" class="logo">
+        </router-link>
+       
     </div>
     <ul class="nav-list">
 
