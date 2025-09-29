@@ -16,7 +16,7 @@ const isActiveLink=(routePath)=>{
     <ul class="nav-list">
 
         <router-link to="/learn">
-            <li :class="{'active':isActiveLink('/learn')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">LEARN</li>
+            <li :class="{'active':isActiveLink('/learn') || isActiveLink('/')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/784035717e2ff1d448c0f6cc4efc89fb.svg" alt="">LEARN</li>
         </router-link>
 
         <router-link to="/characters">
@@ -24,7 +24,7 @@ const isActiveLink=(routePath)=>{
         </router-link>
 
         <router-link to="/practice">
-            <li :class="{'active':isActiveLink('/practice')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/5187f6694476a769d4a4e28149867e3e.svg" alt="">PRACTICE</li>
+            <li :class="{'active':isActiveLink('/practice') || isActiveLink('/character-practice')}"><img src="https://d35aaqx5ub95lt.cloudfront.net/vendor/5187f6694476a769d4a4e28149867e3e.svg" alt="">PRACTICE</li>
         </router-link>
 
         <router-link to="/">
