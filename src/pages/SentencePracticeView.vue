@@ -61,25 +61,33 @@ watch(answerCharacters,(currentValue)=>{
 }
 
 .sentenceMain-container{
-    gap:20px
+    gap:40px;
+    margin-top:auto;
+}
 
+.button{
+    min-width:30px;
+    font-size: 20px;
+    padding:20px 20px;
 }
 
 .japaneseSentence-section{
     align-items: center;
     align-self:center;
-    min-width: 250px;
-    min-height: 50px;
+    justify-content: center;
+    min-width: 300px;
+    min-height: 70px;
     border:2px solid var(--primary-border-color);
     border-radius:15px;
-    padding:5px 0;
+    padding:20px;
+    font-size: 30px;
 }
 .answerSentence-container{
     border-top: 2px solid var(--primary-border-color);
     border-bottom: 2px solid var(--primary-border-color);
-    min-height: 60px;
+    min-height: 100px;
     align-items: center;
-    padding:0 5px;
+    padding:20px 5px;
 }
 
 .inputSentence-container{
@@ -89,6 +97,7 @@ watch(answerCharacters,(currentValue)=>{
 .answer-container{
     display:flex;
     gap:5px;
+    flex-wrap: wrap;
 }
 
 .sentenceFooter-container{
