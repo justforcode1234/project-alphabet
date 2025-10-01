@@ -18,6 +18,13 @@ import CharacterPracticeView from './CharacterPracticeView.vue';
                 <p>Start a training session to practice your Katakana characters</p>
             </div>
         </router-link>
+
+        <router-link to="/sentence-practice">
+            <div class="practiceCard-wrapper card">
+                <h3>Practice Sentences</h3>
+                <p>Practice your japanese by completing sentences</p>
+            </div>
+        </router-link>
     </div>
 </template>
 

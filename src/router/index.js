@@ -5,6 +5,7 @@ import LearnView from "../pages/LearnView.vue";
 import CharactersView from "../pages/CharactersView.vue";
 import CharacterPracticeView from "../pages/CharacterPracticeView.vue";
 import PracticeView from "../pages/PracticeView.vue";
+import SentencePracticeView from "../pages/SentencePracticeView.vue";
 
 const routes=[
     {
@@ -16,6 +17,7 @@ const routes=[
             {path:'characters',name:'characters',component:CharactersView},
             {path:'practice',name:'practice',component:PracticeView},
             {path:'character-practice',name:'charactersPractice',component:CharacterPracticeView},
+            {path:'sentence-practice',name:'sentencePractice',component:SentencePracticeView},
         ]
     }
 ]

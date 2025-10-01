@@ -27,7 +27,12 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 button{
+    padding:10px;
     cursor: pointer;
+    border:2px solid var(--primary-border-color);
+    border-radius:7px;
+    background-color: transparent;
+    color:var(--primary-text-color);
 }
 
 ul{

@@ -1,0 +1,52 @@
+[
+  {
+    "jp-sentence": "これはみずです",
+    "romanji-sentence": "Kore wa mizu desu",
+    "en-sentence": "This is water"
+  },
+  {
+    "jp-sentence": "あさごはんをたべます",
+    "romanji-sentence": "Asagohan o tabemasu",
+    "en-sentence": "I eat breakfast"
+  },
+  {
+    "jp-sentence": "ねこがいます",
+    "romanji-sentence": "Neko ga imasu",
+    "en-sentence": "There is a cat"
+  },
+  {
+    "jp-sentence": "わたしはがっこうへいきます",
+    "romanji-sentence": "Watashi wa gakkou e ikimasu",
+    "en-sentence": "I go to school"
+  },
+  {
+    "jp-sentence": "ともだちとあそびます",
+    "romanji-sentence": "Tomodachi to asobimasu",
+    "en-sentence": "I play with friends"
+  },
+  {
+    "jp-sentence": "おちゃをのみます",
+    "romanji-sentence": "Ocha o nomimasu",
+    "en-sentence": "I drink tea"
+  },
+  {
+    "jp-sentence": "いぬはかわいいです",
+    "romanji-sentence": "Inu wa kawaii desu",
+    "en-sentence": "The dog is cute"
+  },
+  {
+    "jp-sentence": "きょうはあめです",
+    "romanji-sentence": "Kyou wa ame desu",
+    "en-sentence": "Today is rainy"
+  },
+  {
+    "jp-sentence": "でんしゃにのります",
+    "romanji-sentence": "Densha ni norimasu",
+    "en-sentence": "I ride the train"
+  },
+  {
+    "jp-sentence": "ほんをよみます",
+    "romanji-sentence": "Hon o yomimasu",
+    "en-sentence": "I read a book"
+  }
+]
